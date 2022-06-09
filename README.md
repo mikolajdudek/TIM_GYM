@@ -1,2 +1,2 @@
 # TIM
-Projekt siłowni
+Projekt siłownia
