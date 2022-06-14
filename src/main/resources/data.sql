@@ -14,3 +14,16 @@ CREATE TABLE podopieczny (
                            surname VARCHAR(250) NOT NULL,
                            id_trener INT NOT NULL
 );
+
+INSERT INTO trener (name, surname, kod_trenera) VALUES
+                                                      ('Adam', 'Zakrzewski', 'AZ123'),
+                                                      ('Szymon', 'Kot', 'SK123'),
+                                                      ('Jan', 'Lotek', 'JL123');
+
+INSERT INTO podopieczny (name, surname, id_trener) VALUES
+                                                      ('Adam', 'Majutek', 1),
+                                                      ('Zbyszek', 'Sowa', 2),
+                                                      ('Jan', 'Grycan', 3),
+                                                      ('Szymon', 'Brzoza', 1),
+                                                      ('Bartosz', 'Lot', 2),
+                                                      ('Kuba', 'Zima', 3);
