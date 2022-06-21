@@ -10,6 +10,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class WardRequest {
+    private String username;
+    private String password;
     private String name;
     private String surname;
     private String code;
