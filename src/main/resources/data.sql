@@ -21,11 +21,13 @@ create table authorities
 );
 
 insert into users (id, username, password, enabled)
-values ('887f4ba5-9936-4ef6-9969-5974ee1a79f8', 'test',
-        '{bcrypt}$2a$10$upzXFsFUOClFRR69OMKF8eajGMRs0vhcSHqvNDKy9yfW45w7o9z6O', true);
+        --Trainer --
+values ('887f4ba5-9936-4ef6-9969-5974ee1a79f8', 'Adam','{bcrypt}$2a$10$upzXFsFUOClFRR69OMKF8eajGMRs0vhcSHqvNDKy9yfW45w7o9z6O', true),
+       --Ward--
+       ('b60bfc9f-7cbe-4127-942e-8f564e2f3fd4', 'Jan','{bcrypt}$2a$10$upzXFsFUOClFRR69OMKF8eajGMRs0vhcSHqvNDKy9yfW45w7o9z6O', true);
 
 insert into authorities (username, authority)
-values ('test', 'USER');
+values ('Adam', 'USER'), ('Jan', 'USER');
 
 CREATE TABLE trainer
 (
