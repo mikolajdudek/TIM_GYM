@@ -6,6 +6,7 @@ import com.example.gym.dto.WardResponse;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.UUID;
 
 @Data
 @Entity
@@ -13,7 +14,7 @@ public class Ward {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_ward")
-    private Integer idWard;
+    private UUID idWard;
 
     @Column(name = "name")
     private String name;
