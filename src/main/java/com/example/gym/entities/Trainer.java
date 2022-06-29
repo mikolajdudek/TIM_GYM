@@ -12,7 +12,6 @@ import java.util.UUID;
 @Data
 public class Trainer {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_trainer")
     private UUID idTrainer;
 

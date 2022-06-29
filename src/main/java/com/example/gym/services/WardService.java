@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -33,6 +34,7 @@ public class WardService implements WardServiceInterface {
     //add
     public void addWards(WardRequest wardRequest){
         Ward ward = new Ward();
+        ward.setIdWard(UUID.randomUUID());
         ward.setName(wardRequest.getName());
         ward.setSurname(wardRequest.getSurname());
         ward.setTrainer(trainerRepository.findByCode(wardRequest.getCode()));

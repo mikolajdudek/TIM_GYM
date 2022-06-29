@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -21,9 +22,9 @@ public class TrainerService implements TrainerServiceInterface {
     private WardRepository wardRepository;
 
     @Autowired
-    public void TrainerService(TrainerRepository trainerRepository, WardRepository wardRepository) {
+    public void TrainerService(TrainerRepository trainerRepository) {
         this.trainerRepository = trainerRepository;
-        this.wardRepository  = wardRepository;
+
     }
 
     //all trainer
@@ -37,6 +38,7 @@ public class TrainerService implements TrainerServiceInterface {
     //dodawanie manager
     public TrainerResponse addTrainer(TrainerRequest request) {
         Trainer trainer = new Trainer();
+        trainer.setIdTrainer(UUID.randomUUID());
         trainer.setName(request.getName());
         trainer.setSurname(request.getSurname());
 

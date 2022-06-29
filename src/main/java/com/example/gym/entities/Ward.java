@@ -12,7 +12,6 @@ import java.util.UUID;
 @Entity
 public class Ward {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_ward")
     private UUID idWard;
 
