@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.UUID;
 
-
+//zamiast uuid integer
 @Repository
 public interface TrainerRepository extends JpaRepository<Trainer, UUID> {
     Trainer findByName(String name);
